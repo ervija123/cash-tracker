@@ -1,3 +1,4 @@
+import 'package:cash_tracker/pages/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,7 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return MaterialApp(
+      title: 'Cash Tracker',
+      debugShowCheckedModeBanner: false,
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
+    );
   }
 
 }
